@@ -22,7 +22,7 @@ app.use('/person', personRoutes)
 app.get('/', (req, res) => {
     // mostrar req
 
-    res.json({message: 'Oi Express - funcionou!'})
+    res.json({message: 'Oi Express - funcionou! - teste final!'})
 })
 
 // entregar uma porta
