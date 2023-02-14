@@ -7,7 +7,7 @@ router.post('/', async (req, res) => {
 
     //req.body
     // {name: "Lucas", salary: 5000, approved: false}
-    const {nome, preco} = req.body
+    const {nome, preco, descricao} = req.body
 
     if(!nome) {
         res.status(422).json({error: 'O nome é obrigatório!'})
@@ -16,7 +16,8 @@ router.post('/', async (req, res) => {
 
     const produto = {
         nome,
-        preco
+        preco,
+        descricao
     }
 
     try {
