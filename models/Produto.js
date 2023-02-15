@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const Produto = mongoose.model('Produto', {
     nome: String,
     preco: Number,
-    desricao: String
+    descricao: String,
 })
 
 module.exports = Produto

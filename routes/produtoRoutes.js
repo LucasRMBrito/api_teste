@@ -1,6 +1,6 @@
 const router = require('express').Router();
-const Produto = require('../models/Produto');
 
+const Produto = require('../models/Produto');
 
 // Create - criação de dados
 router.post('/', async (req, res) => {
@@ -17,7 +17,7 @@ router.post('/', async (req, res) => {
     const produto = {
         nome,
         preco,
-        descricao
+        descricao,
     }
 
     try {
@@ -64,11 +64,12 @@ router.patch('/:id', async (req, res) => {
 
     const id= req.params.id
 
-    const {nome, preco} = req.body
+    const {nome, preco, descricao} = req.body
 
     const produto = {
         nome,
-        preco
+        preco,
+        descricao,
     }
 
     try {

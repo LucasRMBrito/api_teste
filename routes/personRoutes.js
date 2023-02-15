@@ -7,7 +7,7 @@ router.post('/', async (req, res) => {
 
     //req.body
     // {name: "Lucas", salary: 5000, approved: false}
-    const {name, salary, approved} = req.body
+    const {name, salary, approved, desc} = req.body
 
     if(!name) {
         res.status(422).json({error: 'O nome é obrigatório!'})
@@ -18,6 +18,7 @@ router.post('/', async (req, res) => {
         name,
         salary,
         approved,
+        desc,
     }
 
     try {
@@ -64,12 +65,13 @@ router.patch('/:id', async (req, res) => {
 
     const id= req.params.id
 
-    const {name, salary, approved} = req.body
+    const {name, salary, desc} = req.body
 
     const person = {
         name,
         salary,
         approved,
+        desc,
     }
 
     try {
